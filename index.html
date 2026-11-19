@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ডিমের হিসাব (Dimer Hisab) — ডিজিটাল আড়ত খাতা ও ক্যাশ মেমো</title>
+  <meta name="description" content="ডিমের আড়তদার, পাইকারি ব্যবসায়ী ও খামারিদের জন্য আধুনিক ডিজিটাল হিসাব খাতা, ক্যাশ মেমো ও মহাজন চালান অ্যাপ।" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #14532d;
+      --primary-light: #166534;
+      --accent: #f59e0b;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Hind Siliguri', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    header {
+      background: linear-gradient(135deg, #14532d 0%, #166534 60%, #15803d 100%);
+      color: #fff;
+      padding: 48px 20px 56px;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+    header h1 {
+      font-size: 34px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    header p {
+      max-width: 640px;
+      margin: 0 auto 24px;
+      font-size: 16px;
+      color: #e2f5e9;
+    }
+    .btn-group {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 15px;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); opacity: 0.95; }
+    .btn-primary {
+      background: var(--accent);
+      color: #111827;
+    }
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+    }
+    section {
+      padding: 42px 0;
+    }
+    h2 {
+      font-size: 24px;
+      color: var(--primary);
+      margin-bottom: 18px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+    }
+    .card h3 {
+      font-size: 17px;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .card p {
+      font-size: 14.5px;
+      color: var(--muted);
+    }
+    .policy-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 26px;
+    }
+    .policy-box h3 {
+      font-size: 17px;
+      color: var(--primary-light);
+      margin: 18px 0 6px;
+    }
+    .policy-box p, .policy-box li {
+      font-size: 14.5px;
+      color: var(--muted);
+    }
+    .policy-box ul {
+      padding-left: 20px;
+      margin-top: 6px;
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      background: #ffffff;
+    }
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="badge">অ্যান্ড্রয়েড ব্যবসায়িক হিসাব খাতা অ্যাপ</div>
+      <h1>ডিমের হিসাব (Dimer Hisab)</h1>
+      <p>ডিমের আড়তদার, পাইকারি ব্যবসায়ী ও খামারিদের জন্য আধুনিক ডিজিটাল ক্যাশ মেমো, মহাজন চালান এবং পার্টি ও মহাজন বকেয়া হিসাব খাতা।</p>
+      <div class="btn-group">
+        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.aistudio.dimerhisab.egghub" target="_blank" rel="noopener">
+          Google Play থেকে ডাউনলোড করুন
+        </a>
+        <a class="btn btn-outline" href="#privacy">Privacy Policy</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="features">
+      <h2>অ্যাপের মূল সুবিধাসমূহ</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>ডিজিটাল ক্যাশ মেমো</h3>
+          <p>লাল ডিম, সাদা ডিম, হাঁস ও কোয়েলের ডিমসহ ১০০ ডিমের দর অনুযায়ী স্বয়ংক্রিয় মোট টাকা, নগদ জমা ও বকেয়ার নিখুঁত হিসাব।</p>
+        </div>
+        <div class="card">
+          <h3>মহাজনের ক্রয় ও চালান</h3>
+          <p>খামারি ও মহাজনের কাছ থেকে ডিম ক্রয়ের চালান, পাওনা-দেনা এবং পরিশোধের পূর্ণাঙ্গ রেকর্ড।</p>
+        </div>
+        <div class="card">
+          <h3>পার্টি ও মহাজন খাতা</h3>
+          <p>প্রতিটি কাস্টমার ও মহাজনের আলাদা খতিয়ান, বকেয়া আদায়, ফোনবুক থেকে নম্বর যোগ এবং এক ক্লিকে কল করার সুবিধা।</p>
+        </div>
+        <div class="card">
+          <h3>পিডিএফ (PDF) ও শেয়ার</h3>
+          <p>প্রফেশনাল আড়ত মেমো ও চালান তৈরি করে WhatsApp, ইমু বা মেসেঞ্জারে সরাসরি শেয়ার ও প্রিন্ট করার সুবিধা।</p>
+        </div>
+        <div class="card">
+          <h3>অফলাইন ও ক্লাউড ব্যাকআপ</h3>
+          <p>ইন্টারনেট ছাড়াই অফলাইনে সম্পূর্ণ ব্যবহারযোগ্য এবং গুগল অ্যাকাউন্ট দিয়ে নিরাপদ ক্লাউড ব্যাকআপ ও রিস্টোর সুবিধা।</p>
+        </div>
+        <div class="card">
+          <h3>বাংলা সংখ্যা ও সহজ ব্যবহার</h3>
+          <p>বাংলাদেশি আড়ত ব্যবসার উপযোগী সহজ বাংলা ইন্টারফেস, তারিখভিত্তিক বিক্রয় রিপোর্ট এবং দৈনিক হিসাব সারসংক্ষেপ।</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy">
+      <h2>গোপনীয়তা নীতি (Privacy Policy)</h2>
+      <div class="policy-box">
+        <p><strong>অ্যাপের নাম:</strong> ডিমের হিসাব (Dimer Hisab) — <code>com.aistudio.dimerhisab.egghub</code></p>
+        <p><strong>কার্যকর তারিখ:</strong> ২০২৬</p>
+
+        <h3>১. আমরা কী তথ্য সংগ্রহ করি</h3>
+        <ul>
+          <li><strong>ব্যবসায়িক হিসাবের তথ্য:</strong> আপনার তৈরি করা মেমো, চালান, পার্টি ও মহাজনের নাম, ফোন নম্বর, ঠিকানা এবং লেনদেনের হিসাব আপনার ডিভাইসে সংরক্ষিত থাকে।</li>
+          <li><strong>অ্যাকাউন্ট তথ্য (ঐচ্ছিক):</strong> আপনি ক্লাউড ব্যাকআপ চালু করতে Google Sign-In ব্যবহার করলে আপনার নাম ও ইমেইল ঠিকানা Firebase Authentication ও Firestore-এ নিরাপদে সংরক্ষিত হয়।</li>
+          <li><strong>ফোনবুক অ্যাক্সেস:</strong> পার্টি বা মহাজনের নম্বর যুক্ত করতে অ্যান্ড্রয়েডের নিরাপদ সিস্টেম কন্টাক্ট পিকার ব্যবহৃত হয়; আমরা আপনার সম্পূর্ণ কন্টাক্ট লিস্ট সংগ্রহ বা সার্ভারে আপলোড করি না।</li>
+        </ul>
+
+        <h3>২. তথ্যের নিরাপত্তা ও ব্যবহার</h3>
+        <p>আপনার ব্যবসায়িক তথ্য শুধুমাত্র আপনার নিজের হিসাব সংরক্ষণ ও ব্যাকআপের জন্য ব্যবহৃত হয়। সমস্ত ক্লাউড ডেটা এনক্রিপ্টেড (HTTPS/TLS) সংযোগের মাধ্যমে স্থানান্তরিত হয় এবং কোনো তৃতীয় পক্ষের কাছে বিক্রি বা শেয়ার করা হয় না।</p>
+
+        <h3>৩. অ্যাকাউন্ট ও ডেটা মুছে ফেলার অধিকার</h3>
+        <p>ব্যবহারকারী যেকোনো সময় অ্যাপের <strong>সেটিংস → লগইন / প্রোফাইল → অ্যাকাউন্ট ডিলিট</strong> অপশন ব্যবহার করে অথবা নিচের ইমেইলে যোগাযোগ করে নিজের অ্যাকাউন্ট ও ক্লাউড ডেটা স্থায়ীভাবে মুছে ফেলতে পারবেন।</p>
+
+        <h3>৪. বিজ্ঞাপন (Advertising)</h3>
+        <p>অ্যাপে ভবিষ্যতে বা বর্তমানে Google AdMob-এর মাধ্যমে বিজ্ঞাপন প্রদর্শিত হলে, Google-এর নিজস্ব গোপনীয়তা নীতি প্রযোজ্য হতে পারে।</p>
+
+        <h3>৫. যোগাযোগ (Contact Us)</h3>
+        <p>অ্যাপ বা গোপনীয়তা নীতি সম্পর্কে কোনো প্রশ্ন থাকলে আমাদের ইমেইল করুন:
+          <a href="mailto:anowar.hossain78699@gmail.com">anowar.hossain78699@gmail.com</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© ২০২৬ ডিমের হিসাব (Dimer Hisab) • যোগাযোগ: <a href="mailto:anowar.hossain78699@gmail.com">anowar.hossain78699@gmail.com</a></p>
+      <p style="margin-top: 6px;"><a href="/app-ads.txt">app-ads.txt</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
